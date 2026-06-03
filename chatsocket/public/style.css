@@ -1,0 +1,41 @@
+.title{
+    text-align: center;
+    font-size: 30px;
+    color: rgb(65, 146, 253);
+}
+#username{
+    width: 50%;
+    padding: 10px;
+    border:0px;
+}
+#chat{
+    width: 100%;
+    height: 700px;
+    border:1px solid black;
+    overflow-y: scroll;
+    background-color: rgb(242, 255, 251);
+}
+#writing{
+    width: 85%;
+    margin:10px;
+    display: block;
+    padding: 10px;
+    margin-left: 15px;
+    margin-right: auto;
+}
+#messages{
+    height: 300px;
+    overflow: auto;
+}
+.message{
+    background-color: rgb(104, 170, 255);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+#write-message{
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    height: 50px;
+}

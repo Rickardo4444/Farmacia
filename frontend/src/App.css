@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100vh;
+  width: 100vw;
+  font-family: "Inter", Arial, sans-serif;
+  background: #0f172a;
+  color: rgb(31, 41, 55);
+  overflow: hidden; /* Elimina el scroll global de toda la pantalla */
+}
+
+/* ===== LOGIN CORREGIDO Y INTEGRADO ===== */
+.login-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top, #4f46e5, #1e3a8a);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+}
+
+.login-box {
+  width: 100%;
+  max-width: 390px; /* Tamaño ideal y compacto para la tarjeta de login */
+  background: white;
+  padding: 40px 30px;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.4s ease;
+  text-align: center;
+}
+
+.login-box h1 {
+  margin-bottom: 25px;
+  text-align: center;
+  color: #1e3a8a;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+/* ===== INPUTS EXCLUSIVOS DEL LOGIN (Para evitar colisiones) ===== */
+.login-box input {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 14.5px;
+  outline: none;
+  transition: all 0.2s;
+  background: #f9fafb;
+  color: #1f2937;
+  text-align: left;
+}
+
+.login-box input:focus {
+  border-color: #4f46e5;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+/* ===== BOTONES DEL LOGIN ===== */
+.login-box button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #4f46e5, #3b82f6);
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.login-box button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.25);
+}
+
+/* Estilo para botón secundario de Registro (si lo usas dentro de tu .login-box) */
+.login-box .btn-secundario {
+  background: #ffffff;
+  color: #4f46e5;
+  border: 1px solid #e5e7eb;
+  margin-top: 10px;
+}
+
+.login-box .btn-secundario:hover {
+  background: #f8fafc;
+  border-color: #4f46e5;
+  box-shadow: none;
+}
+
+/* ===== INPUTS GENERALES DEL DASHBOARD (No afectan al login) ===== */
+input[type="text"], 
+input[type="password"], 
+input[type="email"],
+input[type="number"] {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 15px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+  background: #fafafa;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus {
+  border-color: #3b82f6;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* Botón principal del Dashboard */
+.btn-principal {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #4f46e5, #3b82f6);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+
+/* ===== DASHBOARD TOTAL ENCUADRE ===== */
+.dashboard {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden; /* Impide desbordamientos externos */
+  background: #0f172a; 
+}
+
+/* ===== SIDEBAR ESTÁTICO FIJO ===== */
+.sidebar {
+  width: 260px;
+  background: #1e293b;
+  padding: 30px 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  height: 90vh; /* Ajustado a 100vh para que se alinee perfectamente a la pantalla */
+  position: relative; 
+  flex-shrink: 0; 
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+  font-size: 15px;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+}
+
+.sidebar button {
+  background: rgba(255, 255, 255, 0.06);
+  color: #e2e8f0;
+  text-align: left;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  border: none;
+  width: 100%;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.sidebar button:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+/* ===== CONTENIDO CON ÚNICO SCROLL INTERNO ===== */
+.contenido {
+  flex: 1;
+  padding: 20px;
+  height: 100vh; 
+  overflow-y: auto; 
+  background: #0f172a; 
+}
+
+/* Contenedor blanco interno */
+.contenido-blanco {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 25px;
+  width: 100%;
+  min-height: 100%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 15px;
+  }
+  .sidebar h2 { display: none; }
+  .sidebar button { width: auto; white-space: nowrap; }
+  .contenido { height: calc(100vh - 70px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

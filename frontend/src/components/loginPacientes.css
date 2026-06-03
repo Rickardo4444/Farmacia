@@ -1,0 +1,249 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  background: #f5f7fb;
+  min-height: 100vh;
+  padding: 40px;
+  color: #1f2937;
+}
+
+/* =========================
+   CONTENEDOR
+========================= */
+
+.contenedor {
+  max-width: 1100px;
+  margin: auto;
+  background: white;
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+}
+
+/* =========================
+   TITULOS
+========================= */
+
+h1 {
+  text-align: center;
+  color: #111827;
+  margin-bottom: 35px;
+  font-size: 36px;
+}
+
+h2 {
+  color: #374151;
+  margin-bottom: 15px;
+}
+
+.contenedor > p {
+  text-align: center;
+  color: #6b7280;
+  margin-bottom: 30px;
+}
+
+/* =========================
+   FORMULARIO
+========================= */
+
+.formulario {
+  background: #f9fafb;
+  padding: 25px;
+  border-radius: 16px;
+  margin-bottom: 35px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+input {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 15px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 15px;
+  background: #fff;
+  transition: 0.2s;
+  outline: none;
+}
+
+input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* =========================
+   BOTONES BASE
+========================= */
+
+button {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+  color: white;
+}
+
+/* =========================
+   BOTON GUARDAR (tu azul original)
+========================= */
+
+button {
+  background: #2a5298;
+}
+
+button:hover {
+  background: #1e3c72;
+  transform: translateY(-1px);
+}
+
+/* =========================
+   ACCIONES FORMULARIO
+========================= */
+
+.acciones-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn-invisible {
+  visibility: hidden;
+}
+
+/* =========================
+   LISTA
+========================= */
+
+.titulo-lista {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.lista {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.card-paciente {
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: 0.2s;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-paciente:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+.card-paciente p {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #374151;
+  text-align: center;
+}
+
+.card-paciente strong {
+  color: #111827;
+}
+
+/* =========================
+   BOTONES CARD
+========================= */
+
+.botones {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* =========================
+   EDITAR (igual color original)
+========================= */
+
+.btn-editar {
+  background: #f0ad4e;
+  color: white;
+}
+
+.btn-editar:hover {
+  background: #d9922e;
+}
+
+/* =========================
+   ELIMINAR (igual rojo original)
+========================= */
+
+.btn-eliminar {
+  background: crimson;
+  color: white;
+}
+
+.btn-eliminar:hover {
+  background: darkred;
+}
+
+/* =========================
+   CANCELAR (igual gris original)
+========================= */
+
+.btn-cancelar {
+  background: gray;
+  color: white;
+}
+
+.btn-cancelar:hover {
+  background: #555;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  body {
+    padding: 15px;
+  }
+
+  .contenedor {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .botones {
+    flex-direction: column;
+  }
+}
